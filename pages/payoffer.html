@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Payment Checkout Form</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
+	<link rel="stylesheet" href="stylepay.css">
+  <link rel="shortcut icon" type="image/png" href="favicon.png">
+
+</head>
+<body>
+
+    <style>
+        body{
+  
+  margin: 0 10px;
+  background-image:linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/rpay.jpg); 
+   
+   background-position:bottom;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover;
+}
+
+.payment{
+  background: rgba(43, 42, 42, 0.582);
+  max-width: 700px;
+  margin: 80px auto;
+  height: auto;
+  padding: 35px;
+  padding-top: 70px;
+  border-radius: 5px;
+  position: relative;
+}
+
+
+    </style>
+	
+
+
+<div class="wrapper">
+  <div class="payment">
+    <div class="payment-logo">
+      <p>c</p>
+    </div>
+    
+    
+    <h2><i>Your Card details</i></h2>
+    <div class="form">
+      <div class="card space icon-relative">
+        <label class="label">Card holder:</label>
+        <input type="text" class="input" placeholder="Your Card Name">
+        <i class="fas fa-user"></i>
+      </div>
+      <div class="card space icon-relative">
+        <label class="label">Account number:</label>
+        <input type="text" class="input" data-mask="0000 0000 0000 0000" placeholder="Card Number">
+        <i class="far fa-credit-card"></i>
+      </div>
+      <div class="card-grp space">
+        <div class="card-item icon-relative">
+          <label class="label">Expiry date:</label>
+          <input type="text" name="expiry-data" class="input" data-mask="00 / 00"  placeholder="00 / 00">
+          <i class="far fa-calendar-alt"></i>
+        </div>
+        <div class="card-item icon-relative">
+          <label class="label">ifsc code:</label>
+          <input type="text" class="input" data-mask="000" placeholder="000">
+          <i class="fas fa-lock"></i>
+        </div>
+      </div>
+        
+      <div class="btn" onclick="myFunction()">
+        <a href="home.html">submit</a>
+      </div> 
+      
+    </div>
+  </div>
+</div>
+
+<script>
+    function myFunction() {
+      alert("Your payment will be transffered to your account after verification");
+    }
+    </script>
+
+	
+
+</body>
+</html>

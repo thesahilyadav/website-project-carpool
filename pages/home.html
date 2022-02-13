@@ -1,0 +1,327 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>CoolPool</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">      -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<body>
+    <section class="header">
+        <nav>
+            <div class="logo">
+                <a href="home.html"><img src="images/carlogo.png"></a>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="SignUp.html">Sign up</a></li>
+                    <li><a href="" data-toggle="modal" data-target="#myModal">Login</a></li>
+                    <!-- Modal HTML -->
+                    <div id="myModal" class="modal fade">
+                        <div class="modal-dialog modal-login">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Sign in</h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="/examples/actions/confirmation.php" method="post">
+                                        <div class="form-group">
+                                            <i class="fa fa-user"></i>
+                                            <input type="text" class="form-control" placeholder="Username" required="required">
+                                        </div>
+                                        <div class="form-group">
+                                            <i class="fa fa-lock"></i>
+                                            <input type="password" class="form-control" placeholder="Password" required="required">
+                                        </div>
+                                        <div class="form-group bottom-action clearfix">
+                                            <label class="form-check-label"><input type="checkbox"> Remember me </label>
+                                            <a href="#" class="forgot-link">Forgot Password?</a>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="submit" class="btn btn-primary btn-block btn-lg" value="Sign in">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">Don't have an account? <a href="#">Sign up</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <li><a href="">Contact</a></li>
+
+                    <li><a href="ambu.html">Air Ambulance</a></li>
+                    <li><a href="jetsuit.html">Jetsuit</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="text-box">
+            <h1>CooooLpool</h1>
+            <h2><i>Rides and beyond</i></h2>
+            <p>In addition to giving riders a way to get from point A to point B, we're working to bring the future closer with self-driving technology and urban air transport </p>
+            <!-- Find Ride Input Box -->
+            <div id="mainform">
+                <form id="findride">
+                    <label class="hidden" for="ssource">Source</label>
+                    <input type="text" placeholder="๐Leaving From..." name="ssource">
+                    <hr>
+                    <label class="hidden" for="ddestination">Destination</label>
+                    <input type="text" placeholder="๐Going to" name="ddestination">
+                    <hr>
+                    <label class="hidden" for="appointmentTime">Time</label>
+                    <input type="text" placeholder="Today" onfocus="(this.type='datetime-local')" name="appointmentTime">
+                    <hr>
+                    <label class="hidden" for="numberOfSeates">Seats.</label>
+                    <input type="text" placeholder="Passangers" onfocus="(this.type='range')" min="0" max="5" name="numberOfSeates" id="fader" step="1" oninput="outputUpdate(value)">
+                    <output for="fader" id="cccounter">1 </output>
+                    <div id="searchDiv"><a href="booking.html"><img src="images/search_white_24dp.svg"></a></div>
+                </form>
+            </div>
+            <!-- End......................... -->
+            <a href="OfferRide.html" class="btn"><span>offer Ride</span></a>
+        </div>
+    </section>
+    <section class="box">
+        <h1>Go Literally anywhere</h1>
+        <p>Let's make this your least expensive journey ever.</p>
+        <div class="row">
+            <div class="box-col">
+                <h3><i>Our Flying Pod</i></h3>
+                <p>With access to millions of journeys, you can quickly find people nearby travelling your way.<br>
+                    The app says the stadium is 3 minutes by air, so I say, “let’s do it!”<br>
+                    “Now the app will guide us from where we are currently standing over to the elevator bank, <br>
+                    and it’ll then bring us up to where the helipad would be</p>
+            </div>
+            <div class="box-col">
+                <h3><i>Carpool</i></h3>
+                <p>Enter your exact address to find the perfect ride. Choose who you’d like to travel with. And book!<br>
+                    A carpool is simple. It’s an arrangement between two or more people to make a regular journey in a <br>
+                    single car, typically with each person taking turns to drive the others. However, other carpools have<br>
+                    just one driver who drives each commute. </p>
+            </div>
+            <div class="box-col">
+                <h3><i>Self Flying Suit</i></h3>
+                <p>Get to your exact destination, without the hassle. No queues. No waiting around.<br>
+                    Flying suit is basically an extension of your own skeleton, and a pretty neat one at that.<br>
+                    In other words, it is an external framework of metallic bones and muscles that<br>
+                    not only protect your body, but also enhance your physical power exponentially!</p>
+            </div>
+        </div>
+    </section>
+    <!------------------------------->
+    <section class="jet">
+        <h1>JETSUIT </h1>
+        <p>Individualised flight training programs offer the chance to enrol as members of <br>
+            an exclusive community of Jet Suit Pilots.</p>
+        <div class="vid">
+            <iframe width="900" height="400" src="https://www.youtube.com/embed/ZHk13Xa8dqI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div>
+                <h1><i>BOOK FLIGHT TRAINING</i></h1>
+                <p>Join an exclusive community of Jet Suit pilots.<br>
+                    Complete your details to request entry to the Coolpool Flight Training program. A member of the Coolpool team will get back to you to confirm the next steps.</p>
+                <a href="jetsuit.html" class="btn3"> Book Now</a>
+            </div>
+        </div>
+    </section>
+    <section class="pod">
+        <h1>Our Flying Pod</h1>
+        <h2><i> Flying machine</i></h2>
+        <p>For Business If it is a business meeting or appointment, You need to attend, by choosing to charter a
+            CbarterPlus Private helicopter, you will be able to easily eliminate the necessity of an expensive overnight
+             stay. We can transport you to and from multiple destinations in Me course of one day. You can spend your time in 
+             the air concentrating on what's important not worrying about whether or
+              not you'll be able to arrive at your destination on time.</p>
+        <div class="row">
+            <div class="pod-col">
+                <img src="images/car2.jpeg">
+                <div class="layer">
+                    <h3>PREMIUM</h3>
+                </div>
+            </div>
+            <div class="pod-col">
+                <img src="images/car1.jpg">
+                <div class="layer">
+                    <h3>POOL</h3>
+                </div>
+            </div>
+            <div class="pod-col">
+                <img src="images/car3.jpg">
+                <div class="layer">
+                    <h3>ECONOMY</h3>
+                </div>
+            </div>
+        </div>
+        <a href="pod.html" class="btn">BOOK YOUR POD NOW</a>
+    </section>
+    <section class="working">
+        <h1>How We Work</h1>
+        <p>Connects public transit riders to drivers headed in the same direction.</p>
+        <div class="row">
+            <div class="work-col">
+                <img src="images/pass.jpg" alt="">
+                <h3><i>Poolers</i></h3>
+                <p>Use coolpool’s trip planner and find carpool rides together with public transit results.Before you go online, we ask you to take a photo of yourself, and our technology helps verify that you are wearing a face cover or a mask.The app is built with technology to help you stay connected to your loved ones and our support team, so you can go even further.</p>
+            </div>
+            <div class="work-col">
+                <img src="images/lost.jpg" alt="">
+                <h3><i>Riders</i></h3>
+                <p>Riders can save upto Rs4000/month compared to cabs/sharecabs You deserve to be able to go wherever the opportunity is. Get there with support on the road and technology that helps protect you and those around you.To prioritize your health, all riders are required to wear a face cover or mask. Riders are also no longer allowed to sit in the front seat, to leave more space between each of you. </p>
+            </div>
+            <div class="work-col">
+                <img src="images/driver.jpg" alt="">
+                <h3><i>Driver</i></h3>
+                <p>Select your route and we’ll pair you up with passengers along your way.Safety is designed into the experience. So you feel comfortable driving at night. So you can tell loved ones where you’re going. And so you know you have someone to turn to if anything happens.Friends and family can follow your route and will know as soon as you arrive.All Uber trips are tracked from start to finish, so there’s a record of your trip if something happens.</p>
+            </div>
+        </div>
+    </section>
+    <section class="cta">
+        <h1><i>Self Flying Suit</i></h1>
+        <a class="btn2" onclick="myFunction()">Coming Soon</a>
+        <script>
+            function myFunction() {
+        alert("this service will be coming soon");
+      }
+      </script>
+    </section>
+    <section class="ttm">
+        <h1>What our Users Say</h1>
+        <p>carpool's User Experience</p>
+        <div class="row">
+            <div class="ttm-col">
+                <img src="images/chris.jpg">
+                <div>
+                    <p>I am overall very please with coolpool. The only complaint I have is, now prizes depends on the time you are traveling, if is rush hour, or very early mornings fare is a lot higher. I have felt safe all the time riding them. Very professionals and friendly drivers.</p>
+                    <h3>~ chris evans</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" color="yellow" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" color="yellow" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" color="yellow" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" color="yellow" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" color="yellow" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="ttm-col">
+                <img src="images/thor.jpg">
+                <div>
+                    <p> Needed a ride to Sky Harbor airport, set up my ride online, got my confirmation info. Driver was on time and a super easy person to converse with. He made our trip to the airport easy, comfortable and very enjoyable.</p>
+                    <h3>~ chris hemsworth</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" color="yellow" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" color="yellow" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                    </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" color="yellow" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" color="yellow" class="bi bi-star-half" viewBox="0 0 16 16">
+                        <path d="M5.354 5.119 7.538.792A.516.516 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.537.537 0 0 1 16 6.32a.548.548 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.52.52 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.58.58 0 0 1 .085-.302.513.513 0 0 1 .37-.245l4.898-.696zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.565.565 0 0 1 .162-.505l2.907-2.77-4.052-.576a.525.525 0 0 1-.393-.288L8.001 2.223 8 2.226v9.8z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="ttm-col">
+                <img src="images/tony.jpg">
+                <div>
+                    <p>Great personable driver, very clean car. On time knee he knew the area well. Offers further help. The price was excellent. I have been thinking of doing it part time. Definitely will use again for a night on the town.</p>
+                    <h3>~ robert</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" color="yellow" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" color="yellow" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" color="yellow" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" color="yellow" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" color="yellow" class="bi bi-star-half" viewBox="0 0 16 16">
+                        <path d="M5.354 5.119 7.538.792A.516.516 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.537.537 0 0 1 16 6.32a.548.548 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.52.52 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.58.58 0 0 1 .085-.302.513.513 0 0 1 .37-.245l4.898-.696zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.565.565 0 0 1 .162-.505l2.907-2.77-4.052-.576a.525.525 0 0 1-.393-.288L8.001 2.223 8 2.226v9.8z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <h4>ABOUT US</h4>
+        <p>coolpool is a trusted community marketplace that connects drivers with empty seats to co-travellers looking for a ride.<br>
+            Over 12 million people use coolpool every quarter creating an entirely new, people-powered network. </p>
+        <div class="icons">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+            </svg>
+        </div>
+        <p>© COOLPOOL INDUSTRIES LTD | REGISTERED IN THE INDIA.
+            COMPANY NO. 10605602</p>
+    </section>
+    <!--  -->
+    <section id="contact">
+        <div class="container">
+            <h1 style="padding-left: 42%; color: white;">Contact Us</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name..">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control" placeholder="Phone no.">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email..">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="4" placeholder="Message.."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="margin-left: 42%">Submit</button>
+                    </form>
+                </div>
+                <div class="col-md-6 contact-info">
+                    <div class="follow"><b><i class="fa fa-map-marker"></i> </b>chandigarh</div>
+                    <div class="follow"><b><i class="fa fa-mobile"></i> </b>(+91)9306048630</div>
+                    <div class="follow"><b><i class="fa fa-envelope"></i> </b>coolpooool@coolpool.com</div>
+                    <div class="follow"><label><b>Get Social </b></label>
+                        <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                        <a href="https://www.youtube.com/"><i class="fa fa-youtube-play"></i></a>
+                        <a href="https://twitter.com/login"><i class="fa fa-twitter"></i></a>
+                        <a href="https://myaccount.google.com/"><i class="fa fa-google-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript">
+    function outputUpdate(vol) {
+        document.querySelector('#cccounter').value = vol;
+    }
+    </script>
+</body>
+</head>
+
+</html>

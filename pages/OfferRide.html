@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style type="text/css">
+
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+.container {
+	background-color: #fff;
+/*	border-radius: 10px;*/
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
+    position: relative;
+    overflow: hidden;
+    width: 627px;
+    max-width: 100%;
+    height: 531px;
+    margin-top: -40%;
+    margin-left: 29.5%;
+}
+
+.container ::placeholder {
+  color: rgb(112, 140, 145);
+  font-family: 'Mali', cursive;
+}
+
+.container input{
+	border: hidden;
+	width: 123px;
+	font-size: 20px;
+}
+
+#ofrride{
+	font-family: 'Courgette', cursive;
+	text-align: center;
+	font-size: 40px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.container input:focus {
+        outline: none;
+/*        width: 150%;
+		height: 150%;
+		border-radius: 5px;*/
+		
+}
+
+table{
+	width: 100%;
+}
+td {
+   padding-left: 14%;
+    height: 50px;
+    vertical-align: bottom;
+    text-align: left;
+}
+
+#subbutton {
+
+    margin-left: 40%;
+    margin-top: 9%;
+    margin-bottom: 5%;
+	border-radius: 20px;
+	border: 1px solid #75BCFF;
+	background-color: blue;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+
+
+/****************************/
+
+body{
+	margin: 0px;
+}
+nav{
+	background-color: black;
+	color: white;
+	height: 10vh;
+/*	width: 100%;*/
+	padding-left: 40%;
+
+}
+
+
+nav ul{
+	display: inline-block;
+	margin-right: 30%;
+    margin-left: 28%;
+}
+.horizontal-list {
+    list-style: none;
+    padding-left: 0px;
+    margin: 17px;
+}
+
+.horizontal-list li {
+    display: inline-block;
+    margin: 0px 8px 8px 0px;
+    font-weight: 100;
+    font-size: 0.9rem;
+}
+
+
+.horizontal-list li a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+
+}
+
+.nav-menu li a {
+    transition: color 0.5s, border-bottom 4s;
+}
+
+.nav-menu li a:hover {
+    color: lightgrey;
+    border-bottom: 1px solid black;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/**********************Slider***********************/
+#slider {
+	overflow: hidden;
+	
+}
+#slider figure {
+	position: relative;
+	width: 500%;
+	margin: 0;
+	left: 0;
+	animation: 30s slider infinite;
+}
+#slider figure a img {
+	width: 20%;
+	height: 90vh;
+	float: left;
+	background-attachment: cover;
+}
+
+@keyframes slider {
+	0% {
+		left: 0;
+	}
+	20% {
+		left: 0;
+	}
+	25% {
+		left: -100%;
+	}
+	45% {
+		left: -100%;
+	}
+	50% {
+		left: -200%;
+	}
+	70% {
+		left: -200%;
+	}
+	75% {
+		left: -300%;
+	}
+	95% {
+		left: -300%;
+	}
+	100% {
+		left: -400%;
+	}
+}
+/***********************Slider End******************/
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed; 
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4);
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  border-radius:2px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal2 {
+  display: none;
+  position: fixed;
+  padding-left: 40%; 
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4);
+}
+
+#my_camera{
+    width: 320px;
+    height: 240px;
+    border: 1px solid black;
+}
+#snapbtn {
+    color: white;
+    margin-left: 8%;
+    background-color: blue;
+    border: none;
+    border-radius: 19px;
+    height: 27px;
+}
+#thankyoubtn{
+    width: 321px;
+   
+    color: white;
+    background-color: green;
+    border: 1px solid cyan;
+    border-radius: 2px;
+    height: 30px;
+}
+</style>
+</head>
+<body>
+
+	<nav>
+		
+		<ul class="horizontal-list text-center nav-menu">
+			<li><a href="home.html"> Home </a></li>
+			
+			<li><a href="SignUp.html">Login</a></li>
+			<li><a href="SignUp.html">Sign Up</a></li>
+			
+		</ul>
+		
+		
+	</nav>
+
+		<!--------------------- Slider -------------------->
+
+	<div id="slider">
+		<figure>
+	    <a href=""><img src="Untitled (3).jpg"></a>
+		<a href=""><img src="images/drift.gif"></a>
+		<a href="">	<img src="Untitled (1).jpg"></a>
+		<a href="">	<img src="images/audi2.gif"></a>
+		<a href="">	<img src="images/car3.jpg"></a>
+		</figure>
+		
+	</div>
+
+
+
+<div class="container">
+
+<div id="ofrride">
+	Offer A Ride
+</div>
+<form method="post" action="">	
+<table>
+	<tr>
+    
+        <td>
+            <input type="text" placeholder="Leaving From..." name="job_num">
+        </td>
+
+        <td>
+            <input type="text"  placeholder="Going to" name="desc">
+        </td>
+	</tr>
+	<tr>
+		<td>
+			<input type="text" placeholder="Today" onfocus="(this.type='datetime-local')" name="appointmentTime">
+		</td>
+		<td>
+			<input type="text" placeholder="Passangers" onfocus="(this.type='range')" min="0" max="5" name="numberOfSeates" id="fader" step="1" oninput="outputUpdate(value)">
+            <output for="fader" id="volume">1 </output>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="Text" placeholder="Car Brand" name="">
+		</td>
+		<td>
+			<input type="text" placeholder="Select Color" onfocus="(this.type='color')" name="">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="text" placeholder="Reg. Number" name="">
+		</td>
+		<td>
+			<input type="text" placeholder="Phone No." name="">
+			<button id="show" type="button"> verify</button>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="text" placeholder="D-License No. " name="">
+		</td>
+		<td>
+			<input type="file" name="">
+		</td>
+	</tr>
+</table>
+<div>
+	<button id="subbutton" type="button">Submit</button>
+</div>
+</form>
+
+</div>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="hide close" >&times;</span>
+    <p>Enter OTP</p>
+    <input type="text" style="height: 36px; width: 100%;">
+    <Button id="subbutton" class="hide">Submit</Button>
+  </div>
+
+</div>
+    <div class="modal2">
+	<div id="my_camera"></div>
+	<input type=button id="snapbtn" value="Take Snapshot" onClick="take_snapshot()">
+	
+    <div id="results" ></div>
+    <button id="thankyoubtn" style="display: none;">Thankyou</button>
+	</div>
+
+<script>
+
+$(document).ready(function(){
+  $(".hide").click(function(){
+
+    $(".modal").hide();
+  });
+  $("#show").click(function(event){
+  	
+    $(".modal").show();
+  });
+  $("#subbutton").click(function(event){
+  	
+    $(".modal2").show();
+  }); 
+});
+
+function outputUpdate(vol) {
+    document.querySelector('#cccounter').value = vol;
+}
+document.getElementById("thankyoubtn").onclick = function () {
+    location.href = "payoffer.html";
+};
+</script>
+
+	<!-- Webcam.min.js -->
+    <script type="text/javascript" src="webcamjs/webcam.min.js"></script>
+
+	<!-- Configure a few settings and attach camera -->
+	<script language="JavaScript">
+	 // Configure a few settings and attach camera
+    Webcam.set({
+      width: 320,
+      height: 240,
+      image_format: 'jpeg',
+      jpeg_quality: 90
+    });
+    Webcam.attach( '#my_camera' );
+    
+    // preload shutter audio clip
+    var shutter = new Audio();
+    shutter.autoplay = true;
+    shutter.src = navigator.userAgent.match(/Firefox/) ? 'shutter.ogg' : 'shutter.mp3';
+    
+    function take_snapshot() {
+        // play sound effect
+        shutter.play();
+    
+        // take snapshot and get image data
+        Webcam.snap( function(data_uri) {
+            // display results in page
+            document.getElementById('results').innerHTML = 
+            '<img src="'+data_uri+'"/>';
+        } );
+        document.getElementById('thankyoubtn').style.display = 'block';
+    }
+	</script>
+
+
+
+
+
+
+</body>
+</html>

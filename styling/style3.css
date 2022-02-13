@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color: black;
+    background-image:linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/audi.gif); 
+   
+    background-position:bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.header{
+    min-height: 50vh;
+    width: 100%;
+   
+    background-position:center ;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+    color: azure;
+}
+
+nav img{
+    width: 50px;
+
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+    
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px  14px;
+    position: relative;
+    
+}
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+     
+}
+.nav-links ul li a:hover{
+    color: aquamarine;  
+}
+.text-box{
+    width: 50%;
+    color: white;
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    margin-bottom: 20px;
+}
+.text-box h1{
+    font-size: 80px;
+
+}
+
+.text-box h2{
+
+padding: 10px;
+color: rgb(238, 149, 32);
+font-size: 40px;
+
+
+
+}
+.text-box p{
+    margin: 16px 0 45px;
+    font-size: 20px;
+    color: #fff;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.ttm{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    margin-top: 170px;
+   
+}
+
+.ttm-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #0f0f0fa8;
+    padding: 20px 10px;
+    cursor: pointer;
+    display: flex;
+    color: #fff;
+}
+
+.ttm-col:hover{
+    box-shadow: 0 0 40px 0px rgba(245, 73, 216, 0.959);
+
+}
+
+.ttm-col img{
+    height: 50px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+
+.ttm-col p{
+    padding: 2px;
+    line-height: 20px;
+
+
+}
+
+.ttm-col h3{
+    margin-top: 15px;
+    text-align: left;
+    color:rgba(233, 109, 64, 0.815) ;
+}
+
+.btn4{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid rgb(241, 50, 24);
+    padding: 8px 24px;
+    font-size: 16px;
+    background:rgb(207, 81, 8);
+    position: relative;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius:40px;
+    margin-left:50%;
+   
+}
+.btn4:hover{
+    background-color: rgb(5, 140, 194);
+    border: 1px solid rgb(14, 122, 223);
+    
+}
+
+
+.btn4 a{
+    color:#fff;
+    text-decoration: none;
+
+}
+
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    color:gray;
+    margin-top: 100px;
+
+}
+
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-size: 600;
+}
